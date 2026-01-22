@@ -1,0 +1,124 @@
+.custom-card {
+  width: 100%;       /* responsive width */
+  max-width: 286px;  /* max width for larger screens */
+  height: 371px;     /* fixed height */
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  background-color: #0c1114;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;    /* center cards on small screens */
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.custom-card-img {
+  width: 100%;
+  height: 150px;         /* adjust based on content */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.custom-card:hover .custom-card-img {
+  transform: scale(1.05);
+}
+
+.custom-card-body {
+  padding: 10px;
+  flex: 1;                /* fill remaining height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.custom-card-title {
+  font-size: 1rem;
+  color: #ff7a00;
+  margin-bottom: 5px;
+}
+
+.custom-card-text {
+  font-size: 0.85rem;
+  flex-grow: 1;
+}
+
+.custom-btn {
+  background-color: #ff7a00;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #e36b00;
+}
+
+.news-con{
+  width: 90%;
+  max-width: 65vw;
+  display: flex; 
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 50px;
+}
+
+button{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #FF7A00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .news-con {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-con {
+    width: 95%;
+    max-width: 100%;
+    gap: 15px;
+  }
+  
+  .custom-card {
+    max-width: 45%;
+    height: auto;
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .news-con {
+    gap: 10px;
+  }
+}
