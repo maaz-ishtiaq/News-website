@@ -5,12 +5,8 @@ export function Useapi(category = 'business', country = 'us') {
   const [randomIndex, setRandomIndex] = useState(0);
 
   useEffect(() => {
-    // Local dev: direct NewsAPI call
-    // Vercel: serverless function
-    const url =
-      import.meta.env.VITE_API_KEY
-        ? `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`
-        : `/api/news?country=${country}&category=${category}`;
+    // Vercel production: use serverless API
+    const url = `/api/news?country=${country}&category=${category}`;
 
     fetch(url)
       .then(res => res.json())
