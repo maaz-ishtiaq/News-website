@@ -6,7 +6,7 @@ export function Useapi(category = 'business', country = 'us') {
   const [randomIndex, setRandomIndex] = useState(0);
 
   useEffect(() => {
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    const url = `/api/news?country=${country}&category=${category}`;
 
     fetch(url)
       .then(response => response.json())
