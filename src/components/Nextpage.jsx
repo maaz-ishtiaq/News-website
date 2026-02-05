@@ -34,7 +34,7 @@ for (let i = allArticles.length - 1; i > 0; i--) {
       ))}
     </div>
 
-<button type="button" class="btn btn-warning" style={{backgroundColor:"#E36B00"}}
+<button type="button" className="btn btn-warning" style={{backgroundColor:"#E36B00"}}
  onClick={() => window.location.href = "/"
 }>Back</button>
     </>

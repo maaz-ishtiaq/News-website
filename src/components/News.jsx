@@ -38,7 +38,7 @@ for (let i = allArticles.length - 1; i > 0; i--) {
       ))}
     </div>
 
-<button type="button" class="btn btn-warning" style={{backgroundColor:"#FF7A00"}} onClick={() => window.location.href = "/Next"
+<button type="button" className="btn btn-warning" style={{backgroundColor:"#FF7A00"}} onClick={() => window.location.href = "/Next"
 }>Next</button>
     </>
   );
